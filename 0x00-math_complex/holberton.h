@@ -1,26 +1,21 @@
-#ifndef _HOLBERTON_H_
-#define _HOLBERTON_H_
+#ifndef HOLBERTON_H
+#define HOLBERTON_H
 
-/*Libraries*/
 #include <stdio.h>
-#include <stdlib.h>
 #include <math.h>
 
-/*structs*/
 /**
- * struct comp - store data both real and imaginary numbers
- * @re: real number
- * @im: imaginary number
- *
- * Return: The complex number
+ * struct complex - Struct for represent imaginary numbers
+ * @re: Number's real part
+ * @im: Number's imaginary part
  */
-typedef struct comp
+
+typedef struct complex
 {
 	double re;
-	double im; /*var holding real & imaginary part of type double*/
+	double im;
 } complex;
 
-/*Prototypes*/
 void display_complex_number(complex c);
 complex conjugate(complex c);
 double modulus(complex c);
@@ -31,5 +26,4 @@ void multiplication(complex c1, complex c2, complex *c3);
 void division(complex c1, complex c2, complex *c3);
 void complex_from_mod_arg(double m, double arg, complex *c3);
 
-#define PI 3.14159265
 #endif
